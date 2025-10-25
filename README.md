@@ -47,39 +47,42 @@ lib/
                 │    └── login_state.dart
                 ├── screen/login_screen.dart
                 └── widgets/login_widget.dart
+```
 
-⚙️ Installation
+---
+
+## ⚙️ Installation
 1️⃣ Activate globally
-dart pub global activate flutter_clean_arch_cli
+- dart pub global activate flutter_clean_arch_cli
 
 2️⃣ Verify installation
-flutter_clean_arch
+- flutter_clean_arch
 
 
 You should see:
 
 🧱 Flutter Clean Architecture CLI
 Usage:
-  flutter_clean_arch init
-  flutter_clean_arch create <feature>
-  flutter_clean_arch create <feature> -f
+- flutter_clean_arch init
+- flutter_clean_arch create <feature>
+- flutter_clean_arch create <feature> -f
 
-🧠 Usage
+## 🧠 Usage
 🏗️ Initialize project
-flutter_clean_arch init
+- flutter_clean_arch init
 
 
 Creates config/, core/, and feature/ directories if missing.
 
 ✨ Create a feature
-flutter_clean_arch create login
+- flutter_clean_arch create login
 
 🔁 Repair missing files
 
 If you delete any files, running the same command will recreate missing ones only.
 
 ♻️ Force recreate feature
-flutter_clean_arch create login --force
+- flutter_clean_arch create login --force
 
 
 Deletes and rebuilds the feature from scratch.
