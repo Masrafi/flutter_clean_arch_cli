@@ -1,6 +1,5 @@
 import 'dart:io';
 import 'package:args/args.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter_clean_arch_cli/src/directory_creator.dart';
 import 'package:flutter_clean_arch_cli/src/file_template_generator.dart';
 
@@ -21,13 +20,13 @@ void main(List<String> arguments) {
     final force = argResults['force'] as bool;
 
     if (featureName == null) {
-      debugPrint('❌ Please provide a feature name. Example: flutter_clean_arch create login');
+      stdout.writeln('❌ Please provide a feature name. Example: flutter_clean_arch create login');
       exit(1);
     }
 
     _createFeature(featureName, force: force);
   } else {
-    debugPrint('''
+    stdout.writeln('''
 🧱 Flutter Clean Architecture CLI
 
 Usage:
@@ -42,9 +41,9 @@ Example:
 }
 
 void _initProject() {
-  debugPrint('⚙️  Checking base folders...');
+  stdout.writeln('⚙️  Checking base folders...');
   DirectoryCreator.ensureBaseStructure();
-  debugPrint('✅ Project initialized successfully!');
+  stdout.writeln('✅ Project initialized successfully!');
 }
 
 void _createFeature(String feature, {bool force = false}) {
@@ -53,12 +52,12 @@ void _createFeature(String feature, {bool force = false}) {
 
   if (featureDir.existsSync() && force) {
     featureDir.deleteSync(recursive: true);
-    debugPrint('♻️  Old feature "$feature" removed (force mode).');
+    stdout.writeln('♻️  Old feature "$feature" removed (force mode).');
   }
 
   DirectoryCreator.ensureBaseStructure();
   DirectoryCreator.createFeatureStructure(feature);
   FileTemplateGenerator.generateTemplates(feature);
 
-  debugPrint('✅ Feature "$feature" created/updated successfully!');
+  stdout.writeln('✅ Feature "$feature" created/updated successfully!');
 }

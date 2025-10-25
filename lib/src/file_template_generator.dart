@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:flutter/material.dart';
 import 'package:path/path.dart' as p;
 
 class FileTemplateGenerator {
@@ -35,7 +34,7 @@ class FileTemplateGenerator {
       final file = File(p.join(basePath, path));
       if (!file.existsSync()) {
         file.writeAsStringSync('// ignore_for_file: camel_case_types\n\n$content');
-        debugPrint('📝 Created: ${file.path}');
+        stdout.writeln('📝 Created: ${file.path}');
       }
     });
   }

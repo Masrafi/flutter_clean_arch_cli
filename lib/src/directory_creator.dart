@@ -1,5 +1,4 @@
 import 'dart:io';
-import 'package:flutter/material.dart';
 import 'package:path/path.dart' as p;
 
 class DirectoryCreator {
@@ -14,7 +13,7 @@ class DirectoryCreator {
       final directory = Directory(dir);
       if (!directory.existsSync()) {
         directory.createSync(recursive: true);
-        debugPrint('📁 Created missing base folder: $dir');
+        stdout.writeln('📁 Created missing base folder: $dir');
       }
     }
   }
@@ -37,7 +36,7 @@ class DirectoryCreator {
       final dir = Directory(p.join(basePath, folder));
       if (!dir.existsSync()) {
         dir.createSync(recursive: true);
-        debugPrint('📁 Created: ${dir.path}');
+        stdout.writeln('📁 Created: ${dir.path}');
       }
     }
   }
