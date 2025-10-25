@@ -1,6 +1,6 @@
 name: flutter_clean_arch_cli
 description: "A CLI tool to generate Flutter Clean Architecture folder structure easily."
-version: 0.0.2
+version: 0.0.3
 homepage: https://github.com/Masrafi/flutter_clean_arch_cli
 repository: https://github.com/Masrafi/flutter_clean_arch_cli
 issue_tracker: https://github.com/Masrafi/flutter_clean_arch_cli/issues

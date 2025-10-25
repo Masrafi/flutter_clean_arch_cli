@@ -1,6 +1,6 @@
 // import 'package:flutter_test/flutter_test.dart';
 //
-// import '../bin/flutter_clan_arch_cli.dart';
+// import '../bin/flutter_clean_arch_cli.dart';
 //
 // void main() {
 //   test('adds one to input values', () {

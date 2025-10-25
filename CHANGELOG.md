@@ -11,3 +11,7 @@
 - Never overwrites existing files unless --force is used
 - Works on Windows, macOS, and Linux
 - Uses only core Dart dependencies (args, path)
+
+## 1.0.3
+
+- Rename file
